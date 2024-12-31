@@ -1,0 +1,18 @@
+
+.codegpt
+
+# Virtual environment
+venv/
+*.pyc
+__pycache__/
+
+# Models and large files
+models/checkpoints/
+models/*.keras
+models/*.pkl
+reports/
+
+# Logs
+logs/
+
+.pytest_cache/

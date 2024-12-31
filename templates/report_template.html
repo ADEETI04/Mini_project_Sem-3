@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forecast Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .section { margin-bottom: 30px; }
+        .metric { margin: 10px 0; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f5f5f5; }
+    </style>
+</head>
+<body>
+    <h1>Forecast Report</h1>
+    <p>Generated on: {{ generation_time }}</p>
+
+    <div class="section">
+        <h2>Executive Summary</h2>
+        {% for finding in report_data.executive_summary.key_findings %}
+            <p>{{ finding }}</p>
+        {% endfor %}
+    </div>
+
+    <div class="section">
+        <h2>Model Performance</h2>
+        <div class="metric">
+            <h3>Accuracy Metrics</h3>
+            {% for metric, value in report_data.model_performance.metrics.items() %}
+                <p>{{ metric }}: {{ "%.2f"|format(value) }}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Monitoring Analysis</h2>
+        {% if report_data.monitoring_analysis %}
+            <h3>Drift Analysis</h3>
+            <p>{{ report_data.monitoring_analysis.drift_summary.interpretation }}</p>
+            
+            <h3>Recent Alerts</h3>
+            {% for alert in report_data.monitoring_analysis.alerts_summary.recent_alerts %}
+                <p>{{ alert.message }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
