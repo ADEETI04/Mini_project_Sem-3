@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forecast Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .section { margin-bottom: 30px; }
+        .metric { margin: 10px 0; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f5f5f5; }
+    </style>
+</head>
+<body>
+    <h1>Forecast Report</h1>
+    <p>Generated on: 2024-12-22 22:29:09</p>
+
+    <div class="section">
+        <h2>Executive Summary</h2>
+        
+            <p>Model achieves 0.00% mean absolute percentage error</p>
+        
+            <p>Forecast shows downward trend of 0.00 units per period</p>
+        
+    </div>
+
+    <div class="section">
+        <h2>Model Performance</h2>
+        <div class="metric">
+            <h3>Accuracy Metrics</h3>
+            
+                <p>MAE: 0.18</p>
+            
+                <p>RMSE: 0.22</p>
+            
+                <p>MAPE: 35.50</p>
+            
+                <p>R2: 0.92</p>
+            
+                <p>DirectionAccuracy: 0.93</p>
+            
+                <p>ForecastBias: -0.07</p>
+            
+                <p>TrackingSignal: -0.41</p>
+            
+                <p>ForecastAccuracy: 64.50</p>
+            
+                <p>OverUnderRatio: 1.83</p>
+            
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Monitoring Analysis</h2>
+        
+            <h3>Drift Analysis</h3>
+            <p>High data drift - Consider model retraining</p>
+            
+            <h3>Recent Alerts</h3>
+            
+                <p>Data drift detected in column days_from_holiday</p>
+            
+                <p>Data drift detected in column days_to_holiday</p>
+            
+                <p>Data drift detected in column sales_pct_change_30</p>
+            
+                <p>Data drift detected in column sales_expanding_mean_30</p>
+            
+                <p>Data drift detected in column sales_rolling_kurt_30</p>
+            
+        
+    </div>
+</body>
+</html>

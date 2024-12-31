@@ -1,0 +1,8 @@
+{
+    "accuracy": 20.047255197865084,
+    "r2_score": 0.9215577067485642,
+    "forecast_bias": -1.9872905851794826,
+    "data_drift_detected": true,
+    "model_version": "1.0.0",
+    "training_date": "2024-12-23 14:38:49"
+}
