@@ -14,5 +14,5 @@ This project implements a machine learning-based solution for inventory demand f
 ## Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/pmishra1477/inventory_forecasting.git
+git clone https://github.com/ADEETI04/Mini_project_Sem-3.git
 cd inventory_forecasting
